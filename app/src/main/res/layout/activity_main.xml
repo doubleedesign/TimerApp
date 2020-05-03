@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!--The saved value-->
+        <TextView
+            android:id="@+id/textView_savedTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You spent 0:00:00 studying last time"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:layout_above="@id/textView_timer"
+            android:layout_marginBottom="20dp"/>
+
+        <!--The time-->
+        <TextView
+            android:id="@+id/textView_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="00:00"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="60sp"
+            android:layout_marginBottom="20dp" />
+
+        <!--Linear layout to contain the buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_timer"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!--The start/pause button-->
+            <Button
+                android:id="@+id/button_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorStart"
+                android:textColor="#FFF"
+                android:text="Start"
+                android:onClick="startTimer"/>
+
+            <!-- The stop button-->
+            <Button
+                android:id="@+id/button_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorStop"
+                android:textColor="#FFF"
+                android:text="Stop"
+                android:onClick="stopTimer"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
